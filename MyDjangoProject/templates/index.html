@@ -6,5 +6,15 @@
 </head>
 <body>
     <h1>HELLO WORLD</h1>
+    {% for i in data %}
+    <h2> Сотрудник {{ forloop.counter }}</h2>
+    {{i.second_name}} {{i.name}}
+    {% if i.salary > 30000 %}
+    <b style="color:green">{{i.salary}}</b>
+    {% else %}
+    <b style="color:red">{{i.salary}}</b>
+    <br>
+    {% endif %}
+    {% endfor %}
 </body>
 </html>
